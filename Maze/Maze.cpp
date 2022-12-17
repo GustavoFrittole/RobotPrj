@@ -19,10 +19,16 @@ void Maze::setMap(const std::string& fname){
             if(file.peek() != '\n' && file.peek() != '\r' && !file.eof()) file.get(map[r][c]);
             else map[r][c] = ' ';   //riempio eventuali spazi vuoti finali
         }
-        if(file.eof() && r != mapSize-1) throw std::invalid_argument("Formato mappa invalido: troppo piccola.");
+        if(file.eof() && r != mapSize-1) {
+            if(file.is_open()) file.close();
+            throw std::invalid_argument("Formato mappa invalido: troppo piccola.");
+        }
         while(file.peek() == '\n' || file.peek() == '\r') file.ignore();
     }
-    if(!file.eof()) throw std::invalid_argument("Formato mappa invalido: troppo grande.");
+    if(!file.eof()){
+        if(file.is_open()) file.close();
+        throw std::invalid_argument("Formato mappa invalido: troppo grande.");
+    }
     file.close();
     return;
 }

@@ -4,12 +4,12 @@
 #include "RightHandRuleBot.h"
 int main(){
     
-    RandomBot rb; //
+    RandomBot rb; 
     RightHandRuleBot rhrb;
     
     std::cout << "\n------MapGen Setup-------\n\n";
     Maze mazeGen("../mapGenerator/map.txt", true, true);
-    
+
     std::cout << "\n------RandomBot-------\n\n";
     //rb.move(mazeGen);
     
@@ -21,7 +21,7 @@ int main(){
     rhrb.move(mazeGen);
     
     std::cout << "\n------Map Setup-------\n\n";
-    Maze maze("MapFiles/Map.txt", true, true);
+    Maze maze("../MapFiles/Map.txt", true, true);
     
     std::cout << "\n------RandomBot-------\n\n";
     //rb.move(maze);
@@ -34,7 +34,7 @@ int main(){
     rhrb.move(maze);
     
     std::cout << "\n------Map1 Setup-------\n\n";
-    Maze maze1("MapFiles/Map1.txt", true, true);
+    Maze maze1("../MapFiles/Map1.txt", true, true);
     
     std::cout << "\n------RandomBot-------\n\n";
     //rb.move(maze1);
@@ -48,7 +48,7 @@ int main(){
     
     
     std::cout << "\n------Map2 Setup-------\n\n";
-    Maze maze2("MapFiles/Map2.txt", true, true);
+    Maze maze2("../MapFiles/Map2.txt", true, true);
     
     std::cout << "\n------RandomBot-------\n\n";
     //rb.move(maze2);
@@ -62,7 +62,7 @@ int main(){
     
     
     std::cout << "\n------Map3 Setup-------\n\n";
-    Maze maze3("MapFiles/Map3.txt", true, true);
+    Maze maze3("../MapFiles/Map3.txt", true, true);
     
     std::cout << "\n------RandomBot-------\n\n";
     //rb.move(maze3);

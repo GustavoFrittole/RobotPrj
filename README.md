@@ -1,6 +1,4 @@
 # Uni prj "Robot in a maze".
-
-## Technologies
 ***
 Nota:
 * cartella dedicata ai file mappa : "/MapFiles/" 

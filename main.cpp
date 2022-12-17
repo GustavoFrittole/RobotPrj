@@ -8,7 +8,10 @@ int main(){
     RightHandRuleBot rhrb;
         
     //RandomBot presente ma non eseguito perché lento
-    //Il progetto poteva essere realizzato in modo che 
+    //Il progetto poteva essere realizzato in tale modo che
+    //i singoli movimenti dei bot venissero gestiti il un loop
+    //nel main, il che avrebbe reso più semplice l'implementazione
+    //di alcune funzioni, come la cooesistenza di più bot
     
     std::cout << "\n------MapGen Setup-------\n\n";
     Maze mazeGen("../mapGenerator/map.txt", true, true);

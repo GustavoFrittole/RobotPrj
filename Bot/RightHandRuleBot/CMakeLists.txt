@@ -1,0 +1,1 @@
+add_library(RightHandRuleBot RightHandRuleBot.cpp)

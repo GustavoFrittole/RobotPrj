@@ -6,6 +6,9 @@ int main(){
     
     RandomBot rb; 
     RightHandRuleBot rhrb;
+        
+    //RandomBot presente ma non eseguito perché lento
+    //Il progetto poteva essere realizzato in modo che 
     
     std::cout << "\n------MapGen Setup-------\n\n";
     Maze mazeGen("../mapGenerator/map.txt", true, true);

@@ -1,5 +1,7 @@
 #include "RightHandRuleBot.h"
 
+//I bordi della mappa sono considerati muri.
+
 int RightHandRuleBot::move(Maze& m){
     srand(time(NULL));
     int dire = rand()%8;    
@@ -20,11 +22,11 @@ int RightHandRuleBot::move(Maze& m){
         
         int pityTimer = 0;
         do{
-            dire = rand()%8;    //cerco una via casuale
-            if(pityTimer++ > 999) return 0; //il bot "viene risparmiato" o "si arrende"
+            dire = rand()%8;    //cerco una via casuale...
+            if(pityTimer++ > 999) return 0; //risparmio il bot e resitituisco l'informazione riguardo al suo fallimeno 
         }while(!m.isPath(Direzione(dire)));
         
-        while(m.isPath(Direzione(dire)) && !m.isExit()) //la seguo fino al primo muro
+        while(m.isPath(Direzione(dire)) && !m.isExit()) //...la seguo fino al primo muro
             m.simpleMove(Direzione(dire));
     }
     return 1;

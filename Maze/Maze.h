@@ -15,13 +15,18 @@ public:
     void setPos();
     void cleanMap();
     bool isOutOfMap(const Direzione&) const;
+    bool isEOutOfMap(const Direzione&) const;
     bool isPath(const Direzione&) const;
+    bool isEPath(const Direzione&) const;
     bool isExit() const;
+    bool isEnemy() const;
     void simpleMove(const Direzione&);
+    void simpleEMove(const Direzione&);
 private:   
     bool disp;              //se attiva stampa la mappa ad ogni cambiamento
     bool polli;             //se attiva le caselle percorse vengono marchiate
-    int position[2];
+    bool enemy;
+    int position[2][2];
     char map[mapSize][mapSize];
 };
 

@@ -1,4 +1,5 @@
-# Uni prj "Robot in a maze".
+# Uni prj "Robot in a maze: Enemy Edition".
 Nota:
-* cartella contenente i file mappa : "/MapFiles" 
-* un generatore di file map.txt e' presente in: "/mapGenerator" (nelle mappe generate l'uscita e' SEMPRE raggiungibile) (scritto in java per esercizio, e' presente anche il codice sorgente)
+* In questa versione è presente un nemico M antagonista di RandomBot (vedi main)
+* RHRB non è influenzato in alcun modo da questa modifica
+* MapGen non crea mappe con tane, vanno aggiunte manualmennte

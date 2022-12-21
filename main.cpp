@@ -62,7 +62,7 @@ int main(){
     maze2.setPos();
     
     std::cout << "\n------RightHandRuleBot-------\n\n";
-    //rhrb.move(maze2);
+    rhrb.move(maze2);
     
     
     std::cout << "\n------Map3 Setup-------\n\n";

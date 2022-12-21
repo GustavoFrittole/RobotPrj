@@ -6,10 +6,18 @@ int RightHandRuleBot::move(Maze& m){
     srand(time(NULL));
     int dire = rand()%8;    
     
-    while(!m.isExit()){
-        for(int noWall = 0; noWall < 9 && !m.isExit(); noWall++){
+    while(!m.isExit() && !m.isEnemy()){
+        for(int noWall = 0; noWall < 9 && !m.isExit() && !m.isEnemy(); noWall++){
             if(!m.isPath(Direzione((dire+1)%8)) && m.isPath(Direzione(dire))){
                 m.simpleMove(Direzione(dire));
+                if(m.getEnemy()){
+                    if(m.isEnemy()) break;
+                    int tempD;
+                    do{
+                        tempD = rand()%8;
+                    }while(!m.isEPath(Direzione(tempD)));
+                    m.simpleEMove(Direzione(tempD));
+                }
                 noWall = 0;
             }
             if(noWall == 0) dire=(dire+2)%8; 
@@ -26,10 +34,10 @@ int RightHandRuleBot::move(Maze& m){
             if(pityTimer++ > 999) return 0; //risparmio il bot e resitituisco l'informazione riguardo al suo fallimeno 
         }while(!m.isPath(Direzione(dire)));
         
-        while(m.isPath(Direzione(dire)) && !m.isExit()) //...la seguo fino al primo muro
+        while(m.isPath(Direzione(dire)) && !m.isExit() && !m.isEnemy()) //...la seguo fino al primo muro
             m.simpleMove(Direzione(dire));
     }
-    return 1;
+return 1;
 }
 
 int abs(int a){

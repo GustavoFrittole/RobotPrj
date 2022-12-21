@@ -20,6 +20,7 @@ public:
     bool isEPath(const Direzione&) const;
     bool isExit() const;
     bool isEnemy() const;
+    bool getEnemy() const {return enemy;}
     void simpleMove(const Direzione&);
     void simpleEMove(const Direzione&);
 private:   

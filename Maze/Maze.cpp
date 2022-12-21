@@ -4,7 +4,7 @@
 #include <chrono>
 #include <iostream>
 
-Maze::Maze(const std::string& fname, bool disp, bool polli) : disp{disp}, polli{polli}, enemy{enemy}{
+Maze::Maze(const std::string& fname, bool disp, bool polli) : disp{disp}, polli{polli}, enemy{false}{
     setMap(fname);
     setPos();
 }
@@ -47,7 +47,6 @@ void Maze::setPos(){
                 position[1][0] = r;
                 position[1][1] = c;
                 enemy = true;
-
             }
         }
     if(!f) throw std::invalid_argument("Formato mappa invalido: manca punto di partenza."); //non è obbligatorio ci sia punto di arrivo

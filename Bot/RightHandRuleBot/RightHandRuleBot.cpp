@@ -1,5 +1,6 @@
 #include "RightHandRuleBot.h"
 
+
 int RightHandRuleBot::move(Maze& m){
     srand(time(NULL));
     int dire = rand()%8;    
@@ -30,7 +31,3 @@ int RightHandRuleBot::move(Maze& m){
     return 1;
 }
 
-int abs(int a){
-    if(a < 0) return -a;
-    return a;
-}

@@ -39,8 +39,3 @@ int RightHandRuleBot::move(Maze& m){
     }
 return 1;
 }
-
-int abs(int a){
-    if(a < 0) return -a;
-    return a;
-}
